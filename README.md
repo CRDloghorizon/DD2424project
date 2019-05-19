@@ -25,5 +25,5 @@ DD2424 project on ShuffleNet using PyTorch
   
 ## Evaluate Example
   ```bash
-  python trainv2.py -a 'shufflenetv2' -b 8 --ratio network_ratio --evaluate 'path to model' --logname 'path to log file' /folder/to/imagenet/
+  python trainv2.py -a 'shufflenetv2' -b 8 --ratio network_ratio --evaluate 'path to model' /folder/to/imagenet/
   ```

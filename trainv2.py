@@ -62,8 +62,6 @@ parser.add_argument('--resume', default='', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
 parser.add_argument('--evaluate', default='', type=str, metavar='PATH',
                     help='path to evaluate model (default: none)')
-parser.add_argument('--logname', default='traininglog1.log', type=str, metavar='FILENAME',
-                    help='path to logging file (default: none)')
 parser.add_argument('--rank', default=-1, type=int,
                     help='node rank for distributed training')
 parser.add_argument('--seed', default=None, type=int,
@@ -78,7 +76,7 @@ best_acc1 = 0
 
 def main():
     args = parser.parse_args()
-
+    
     if args.seed is not None:
         random.seed(args.seed)
         torch.manual_seed(args.seed)
@@ -412,7 +410,7 @@ def accuracy(output, target, topk=(1,)):
 
 
 if __name__ == '__main__':
-    logging.basicConfig(filename=args.logname, format='%(asctime)s '
+    logging.basicConfig(filename='logfile1', format='%(asctime)s '
             '%(name)-12s %(levelname)-8s %(message)s', datefmt='%m-%d %H:%M',
             level=logging.DEBUG)
     # log the command line args
