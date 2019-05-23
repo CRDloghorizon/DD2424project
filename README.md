@@ -1,5 +1,5 @@
 # DD2424project
-DD2424 project on ShuffleNet using PyTorch
+DD2424 project on ShuffleNet using PyTorch (group 83 VT2019)
 
 ## Prepare Dataset
 1. Download the images from http://www.image-net.org/challenges/LSVRC/2012/nonpub-downloads
@@ -17,12 +17,12 @@ DD2424 project on ShuffleNet using PyTorch
   mkdir val && mv ILSVRC2012_img_val.tar val/ && cd val && tar -xvf ILSVRC2012_img_val.tar
   wget -qO- https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh | bash
   ```
-  
+
 ## Train Example
   ```bash
   python trainv2.py -a 'shufflenetv2' -b batch_size --epochs n_epochs --wd 4e-5 --lr 0.1 --ratio network_ratio /folder/to/imagenet/
   ```
-  
+
 ## Evaluate Example
   ```bash
   python trainv2.py -a 'shufflenetv2' -b 8 --ratio network_ratio --evaluate 'path to model' /folder/to/imagenet/
